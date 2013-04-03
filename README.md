@@ -13,4 +13,4 @@ For use the exemple, you need to go to the "exemple" folder and do the "make" co
 
 3. How to use the ModSystem
 
-Now you compiled alll files and you want to use them for your program. I will show you how to do that in a next tutorial, it will be available in french on the siteduzero.com, and in another page in english.
+Now you compiled alll files and you want to use them for your program. I will show you how to do that in a next tutorial, it will be available in french on the siteduzero.com, and on the project's wiki in english (here: https://github.com/lacaulac/ModSystem/wiki).
