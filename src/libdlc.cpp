@@ -39,6 +39,13 @@ funci DLCLibrary::getFunctioni(std::string nomFunc)
 	return init_func;
 	//TODO Retourner la fonction
 }
+funcc DLCLibrary::getFunctionc(std::string nomFunc)
+{
+	initializer = dlsym(m_library, nomFunc.c_str());
+	funcc init_func = (funcc)initializer;
+	return init_func;
+	//TODO Retourner la fonction
+}
 
 bool DLCLibrary::isLoaded()
 {

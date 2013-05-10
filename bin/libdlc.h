@@ -16,14 +16,17 @@ protected:
 public:
 	typedef void (*funcv)(void);
 	typedef void (*funci)(int);
+	typedef void (*funcc)(char);
 	DLCLibrary(std::string chemin); //Constructeur avec RTLD_LAZY
 	DLCLibrary(std::string chemin, int par1); //Constructeur avec choix de l'argument de chargement
 	void freeMemory(); //Libération de la mémoire
 	funcv getFunctionv(std::string nomFunc); //Récupérer une fonction de type void
 	funci getFunctioni(std::string nomFunc); //Récupérer une fonction de type void
+	funcc getFunctionc(std::string nomFunc); //Récupérer une fonction de type void
 	bool isLoaded(); //Verifier que la librairie est chargée
 };
 
 #endif
 typedef void (*funcv)(void);
 typedef void (*funci)(int);
+typedef void (*funcc)(char);
