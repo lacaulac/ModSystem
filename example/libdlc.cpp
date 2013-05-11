@@ -26,6 +26,7 @@ void DLCLibrary::freeMemory()
 }
 	
 
+/*
 template <class Func>
 Func DLCLibrary::getFunction(std::string nomFunc)
 {
@@ -33,7 +34,7 @@ Func DLCLibrary::getFunction(std::string nomFunc)
         Func init_func = (Func)initializer;
         return init_func;
 }
-
+//*/
 funcv DLCLibrary::getFunctionv(std::string nomFunc)
 {
 	initializer = dlsym(m_library, nomFunc.c_str());
