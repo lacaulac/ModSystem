@@ -14,6 +14,7 @@ protected:
 	int m_par1; //L'argument de chargement, par défaut RTLD_LAZY
 	int m_quit; //Recupere la valeur de liberation de mémoire renvoyée par dlclose.
 public:
+	//TODO Delete typedef and use void* instead of these
 	typedef void (*funcv)(void);
 	typedef void (*funci)(int);
 	typedef void (*funcc)(char);
