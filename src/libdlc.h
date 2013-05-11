@@ -19,6 +19,7 @@ public:
 	typedef void (*funcc)(char);
 	typedef void (*funcl)(long);
 	typedef void (*funcd)(double);
+	typedef void (*funcf)(float);
 	DLCLibrary(std::string chemin); //Constructeur avec RTLD_LAZY
 	DLCLibrary(std::string chemin, int par1); //Constructeur avec choix de l'argument de chargement
 	void freeMemory(); //Libération de la mémoire
@@ -26,7 +27,8 @@ public:
 	funci getFunctioni(std::string nomFunc); //Récupérer une fonction de type int
 	funcc getFunctionc(std::string nomFunc); //Récupérer une fonction de type char
 	funcl getFunctionl(std::string nomFunc); //Récupérer une fonction de type long
-	funcd getFunctiond(std::string nomFunc); //Récupérer une fonction de type long
+	funcd getFunctiond(std::string nomFunc); //Récupérer une fonction de type double
+	funcf getFunctionf(std::string nomFunc); //Récupérer une fonction de type float
 	bool isLoaded(); //Verifier que la librairie est chargée
 };
 
@@ -36,3 +38,4 @@ typedef void (*funci)(int);
 typedef void (*funcc)(char);
 typedef void (*funcl)(long);
 typedef void (*funcd)(double);
+typedef void (*funcf)(float);
