@@ -14,7 +14,6 @@ protected:
 	int m_par1; //L'argument de chargement, par défaut RTLD_LAZY
 	int m_quit; //Recupere la valeur de liberation de mémoire renvoyée par dlclose.
 public:
-	//TODO Delete typedef and use void* instead of these
 	typedef void (*funcv)(void);
 	typedef void (*funci)(int);
 	typedef void (*funcc)(char);
@@ -24,6 +23,8 @@ public:
 	DLCLibrary(std::string chemin); //Constructeur avec RTLD_LAZY
 	DLCLibrary(std::string chemin, int par1); //Constructeur avec choix de l'argument de chargement
 	void freeMemory(); //Libération de la mémoire
+	template <class Func>
+	Func getFunction(std::string nomFunc); //Récupérer une fonction de n'importe quel type
 	funcv getFunctionv(std::string nomFunc); //Récupérer une fonction de type void
 	funci getFunctioni(std::string nomFunc); //Récupérer une fonction de type int
 	funcc getFunctionc(std::string nomFunc); //Récupérer une fonction de type char
@@ -40,3 +41,4 @@ typedef void (*funcc)(char);
 typedef void (*funcl)(long);
 typedef void (*funcd)(double);
 typedef void (*funcf)(float);
+template <class Func>

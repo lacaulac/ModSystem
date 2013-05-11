@@ -23,6 +23,8 @@ public:
 	DLCLibrary(std::string chemin); //Constructeur avec RTLD_LAZY
 	DLCLibrary(std::string chemin, int par1); //Constructeur avec choix de l'argument de chargement
 	void freeMemory(); //Libération de la mémoire
+	template <class Func>
+	Func getFunction(std::string nomFunc); //Récupérer une fonction de n'import quel type
 	funcv getFunctionv(std::string nomFunc); //Récupérer une fonction de type void
 	funci getFunctioni(std::string nomFunc); //Récupérer une fonction de type int
 	funcc getFunctionc(std::string nomFunc); //Récupérer une fonction de type char

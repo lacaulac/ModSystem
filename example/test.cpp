@@ -7,7 +7,7 @@ using namespace std;
 
 DLCLibrary test("libtest.so");
 bool outTestLoad;
-funcv testf;
+Func testf;
 
 int main()
 {
@@ -23,8 +23,7 @@ int main()
 	{
 		cout << "$	Chargement echoue" << endl;
 	}
-	testf = test.getFunctionv("testFunc");
-	cout << "Debug" << endl;
+	testf = test.getFunction("testFunc");
 	testf();
 	cout << "$	Liberation de la memoire" << endl;
 	test.freeMemory();

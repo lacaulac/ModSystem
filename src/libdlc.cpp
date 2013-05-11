@@ -24,6 +24,15 @@ void DLCLibrary::freeMemory()
 {
 	m_quit = dlclose(m_library);
 }
+	
+
+template <class Func>
+Func DLCLibrary::getFunction(std::string nomFunc)
+{
+        void* initializer = dlsym(m_library, nomFunc.c_str());
+        Func init_func = (Func)initializer;
+        return init_func;
+}
 
 funcv DLCLibrary::getFunctionv(std::string nomFunc)
 {
