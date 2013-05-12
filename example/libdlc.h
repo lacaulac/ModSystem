@@ -46,4 +46,5 @@ typedef void (*funcc)(char);
 typedef void (*funcl)(long);
 typedef void (*funcd)(double);
 typedef void (*funcf)(float);
+typedef void (*function_type)();
 //template <class Func>
