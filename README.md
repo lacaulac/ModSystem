@@ -1,3 +1,5 @@
+The library is under GPL license. Version 1.0 of the ModSystem
+
 With this library, you can easily use the dlfcn.h C library in C++ trough a object, instead to use many variables for using one library. All your library loading is managed by a object, and you can use void and int functions from the library. Here is the manual
 
 
